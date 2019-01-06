@@ -10,6 +10,7 @@ const router_1 = require("./routes/router");
 // importando para conexion con mongo
 const mongoose_1 = __importDefault(require("mongoose"));
 const passport_1 = __importDefault(require("passport"));
+const express_1 = require("express");
 // configurando el passport
 require('./config/passport');
 //INstanciando el servidor
@@ -21,8 +22,11 @@ server.app.use(passport_1.default.initialize());
 //lleguen en el arreglo 'body' del request
 server.app.use(body_parser_1.default.urlencoded({ extended: true }));
 server.app.use(body_parser_1.default.json());
-// Se importa las rutas
-// var rutas = require('./routes/router');
+
+// HEROKU
+var distDir = __dirname + "../dist/";
+server.app.use(express_1.static(distDir));
+
 //CORS
 server.app.use(cors_1.default({ origin: true, credentials: true }));
 server.app.use((req, res, next) => {
