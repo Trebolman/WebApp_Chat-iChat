@@ -24,7 +24,7 @@ server.app.use(body_parser_1.default.urlencoded({ extended: true }));
 server.app.use(body_parser_1.default.json());
 
 // HEROKU
-var distDir = __dirname + "../dist/";
+var distDir = __dirname + "/dist/";
 console.log(__dirname);
 console.log(distDir);
 server.app.use(express_1.static(distDir));
