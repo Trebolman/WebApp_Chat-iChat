@@ -5,7 +5,7 @@
 
 export const environment = {
   production: false,
-  wsUrl: "http://localhost:3600"
+  wsUrl: "https://ichat-codigo.herokuapp.com/"
 };
 
 /*
