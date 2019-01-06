@@ -1,6 +1,6 @@
 {
-  "name": "mdb-angular-free",
-  "version": "7.1.1",
+  "name": "ichat-codigo",
+  "version": "1.0.0",
   "license": "MIT",
   "scripts": {
     "ng": "ng",
@@ -9,14 +9,14 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "remove-demo-unix": "rm -rf projects && rm angular.json && mv angular-clean.json angular.json",
-    "remove-demo-windows": "rmdir /s /q projects && del angular.json && ren angular-clean.json angular.json",
     "postinstall": "ng build --output-path dist"
   },
   "private": true,
   "dependencies": {
     "@agm/core": "^1.0.0-beta.3",
     "@angular/animations": "^7.1.3",
+    "@angular/cli": "^7.0.6",
+    "@angular/compiler-cli": "^7.1.3",
     "@angular/common": "^7.1.3",
     "@angular/core": "^7.1.3",
     "@angular/forms": "^7.1.3",
@@ -47,9 +47,7 @@
     "rxjs": "^6.0.0-rc.1",
     "socket.io": "^2.2.0",
     "web-animations-js": "^2.3.1",
-    "zone.js": "^0.8.19",
-    "@angular/cli": "^7.0.6",
-    "@angular/compiler-cli": "^7.1.3",
+    "zone.js": "^0.8.19"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "^0.10.6",
