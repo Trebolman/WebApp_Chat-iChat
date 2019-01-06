@@ -1,0 +1,32 @@
+<!-- Default form login -->
+<div class="row d-flex justify-content-center mt-4">
+  <div class="col col-10 col-md-8 col-lg-6 mb-1">
+    <div class="alert alert-success mt-4" role="alert" *ngIf="isLog == 'si'">
+      <strong>El usuario ha ingresado correctamente</strong>
+    </div>
+    <div class="alert alert-danger mt-4 text-center" role="alert" *ngIf="isLog == 'no'">
+      {{message}}
+    </div>
+
+    <form class="text-center border border-light p-5 mb-1" (submit)="ingresar()">
+      <p class="h4 mb-4"><strong>First Blood</strong> chat</p>
+      <!-- Username -->
+      <input type="text" [(ngModel)]="credentials.username" name="username" class="form-control mb-4" placeholder="Username">
+
+      <!-- Email -->
+      <input type="email" [(ngModel)]="credentials.email" name="email" class="form-control mb-4" placeholder="E-mail">
+
+      <!-- Password -->
+      <input type="password" [(ngModel)]="credentials.password" name="password" class="form-control mb-4" placeholder="Password">
+
+      <!-- Sign in button -->
+      <button class="btn btn-info btn-block my-4" type="submit">Ingresar</button>
+
+      <!-- Register -->
+      <p>¿No estas registrado aun?</p>
+      <a class="p-1" routerLink="/register">Registrate</a>
+      <p class="text-center mt-2">by<strong> Codigo/TeamCesar</strong></p>
+    </form>
+  </div>
+</div>
+<!-- Default form login -->

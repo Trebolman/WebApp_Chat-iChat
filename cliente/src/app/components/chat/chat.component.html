@@ -1,0 +1,10 @@
+
+<div class="card">
+  <li class="list-group-item" *ngFor="let msg of mensajes">
+    <strong>{{msg.de}}</strong>: {{msg.cuerpo}}
+  </li>
+</div>
+
+<form (ngSubmit)=enviar() class="pb-2">
+  <input type="text" [(ngModel)]="mensaje" class="form-control" name="texto" placeholder="Mensaje..." autofocus autocomplete="off">
+</form>
