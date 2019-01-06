@@ -16,7 +16,8 @@ class Server {
     constructor() {
         this.usuariosConectados = new n_usuario_lista_1.NUsuariosLista();
         this.app = express_1.default(); //instancia del servidor
-        this.port = environment_1.SERVER_PORT;
+        this.port = process.env.PORT || environment_1.SERVER_PORT;
+        // const PORT = process.env.PORT || 3000;
         // this.port = 3600;
         //Configurando el nuevo servidor web a través de http
         this.httpServer = new http_1.default.Server(this.app); //httpserver si es compatible con socket
