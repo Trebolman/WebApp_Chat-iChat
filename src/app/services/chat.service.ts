@@ -31,7 +31,6 @@ export class ChatService {
   
   public recibirMensajesTogether():Observable<any>{
     return this._wsService.escuchar('mensaje-together');
-    
   }
 
   public getUsuariosActivos(){
