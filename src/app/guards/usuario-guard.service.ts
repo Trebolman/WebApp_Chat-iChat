@@ -14,7 +14,7 @@ export class UsuarioGuardService implements CanActivate {
     if(this._wsService.getUsuario()){
       return true;
     }else{
-      this._router.navigateByUrl("");
+      this._router.navigateByUrl("/mensajes");
       false;
     }
   }

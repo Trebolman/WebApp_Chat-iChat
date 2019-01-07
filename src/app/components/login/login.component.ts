@@ -15,7 +15,7 @@ export class LoginComponent implements OnInit {
     password: ''
   };
   public isLog: string;
-  // public nombre: string = "";
+  // public logState: boolean;
   public message: string;
 
   constructor(private _wsService: WebsocketService,
@@ -28,7 +28,6 @@ export class LoginComponent implements OnInit {
   ingresar() {
     // console.log("[LoginComponent|ingresar] credentials:");
     // console.log(this.credentials);
-
     this._auth.login(this.credentials).subscribe((response) => {
       // console.log("[login]:");
       // console.log(response);
@@ -54,7 +53,7 @@ export class LoginComponent implements OnInit {
       // console.error(err);
     });
 
-    
+
   }
 
 }

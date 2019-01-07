@@ -1,14 +1,13 @@
 <h4 class="text-black-50 mt-1">Conectados</h4>
 <div class="d-block">
   <li class="list-group-item d-block" *ngFor="let usuario of usuariosConectados" >
-    <!-- <div class="row d-flex justify-content-md-between" (click)="enviarMensajePrivado(usuario.id)"> -->
-    <div class="row justify-content-md-start pb-0" (click)="enviarMensajePrivado(usuario.id)">
-      <div class="col col-md-6">
+    <div class="row justify-content-md-start pb-0">
+      <div class="col col-md-4">
         <strong>{{usuario.nombre}}</strong>
       </div>
-      <div class="col col-md-6">
-        <!-- <span class="badge badge-secondary">{{usuario.sala}}</span> -->
-        <span class="badge badge-secondary">invitado</span>
+      <div class="col col-md-8">
+        <a class="badge badge-secondary" (click)="disconnectChat(usuario)" *ngIf="usuario.sala == username">chat principal</a>
+        <a class="badge badge-primary" (click)="connectChat(usuario)" *ngIf="usuario.sala != username">mensaje privado</a>
       </div>
     </div>
   </li>

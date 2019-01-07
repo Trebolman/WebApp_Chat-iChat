@@ -1,5 +1,11 @@
 
-<div class="card" id="chat-mensajes">
+<div class="card d-none d-sm-block" id="chat-mensajes" style="box-sizing: border-box; height: 28em; overflow-y: scroll">
+  <li class="list-group-item" *ngFor="let msg of mensajes">
+    <strong>{{msg.de}}</strong>: {{msg.cuerpo}}
+  </li>
+</div>
+
+<div class="card d-sm-none" id="chat-mensajes" style="box-sizing: border-box; height: 24em; overflow-y: scroll">
   <li class="list-group-item" *ngFor="let msg of mensajes">
     <strong>{{msg.de}}</strong>: {{msg.cuerpo}}
   </li>

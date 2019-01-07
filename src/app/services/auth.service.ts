@@ -61,8 +61,11 @@ export class AuthService {
 
   public isLoggedIn(): boolean {
     const user = this.getUserDetails();
+    console.log("[auth.service|isLoggedIn] user:");
+    console.log(user);
     if (user) {
-      return user.exp > Date.now() / 1000;
+      // return user.exp > Date.now() / 1000;
+      return true;
     } else {
       return false;
     }

@@ -10,7 +10,6 @@ const http_1 = __importDefault(require("http"));
 const socket_io_1 = __importDefault(require("socket.io"));
 const n_usuario_lista_1 = require("./n_usuario_lista");
 const n_usuario_1 = require("./n_usuario");
-const path = require('path');
 //creando la clase del servidor
 class Server {
     //constructor del servidor

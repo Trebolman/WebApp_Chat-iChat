@@ -5,14 +5,16 @@ import { UsuarioGuardService } from '../guards/usuario-guard.service';
 
 import { LoginComponent } from '../components/login/login.component';
 import { RegisterComponent } from '../components/register/register.component';
+import { AppComponent } from '../app.component';
 
 const appRoutes:Routes = [
-  {path: '', component:LoginComponent},
+  {path: '', component:AppComponent},
   {path: 'mensajes', component:MensajesComponent,canActivate:[UsuarioGuardService]},
+  // {path: 'mensajes', component:MensajesComponent},
   {path: 'mensajes/:id', component:MensajesComponent},
   {path: 'login', component:LoginComponent},
   {path: 'register', component:RegisterComponent},
-  {path: '**',component:LoginComponent}
+  {path: '**',component:AppComponent}
 ];
 
 @NgModule({

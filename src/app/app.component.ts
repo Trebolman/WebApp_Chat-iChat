@@ -10,7 +10,8 @@ import { Router } from '@angular/router';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit{
-  title = 'client';
+  public logState: boolean;
+
   constructor(private _wsService:WebsocketService, 
               private _chatService:ChatService,
               private _auth:AuthService,
@@ -18,9 +19,15 @@ export class AppComponent implements OnInit{
   }
   ngOnInit(){
     if(this._auth.isLoggedIn()){
+      console.log("[LoginComponent|ngOnInit] isLoggedIn():");
+      console.log(this._auth.isLoggedIn());
       this._router.navigateByUrl("/mensajes");
+      this.logState = true;
     }else{
+      console.log("[LoginComponent|ngOnInit] isLoggedIn():");
+      console.log(this._auth.isLoggedIn());
       this._router.navigateByUrl("/login");
+      this.logState = false;
     }
   }
 }
